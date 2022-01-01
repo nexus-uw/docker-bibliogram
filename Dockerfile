@@ -1,8 +1,8 @@
 ###########
 # builder #
-FROM node:14-alpine as builder
+FROM node:16-alpine as builder
 
-RUN apk --no-cache add git
+RUN apk --no-cache add git python3 make g++
 
 WORKDIR /app
 
@@ -11,7 +11,7 @@ RUN npm install --no-optional
 
 #######
 # app #
-FROM node:14-alpine
+FROM node:16-alpine
 
 RUN apk add --no-cache graphicsmagick
 
