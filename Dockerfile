@@ -1,6 +1,6 @@
 ###########
 # builder #
-FROM node:16-alpine as builder
+FROM node:14-alpine as builder
 
 RUN apk --no-cache add git
 
@@ -11,7 +11,7 @@ RUN npm install --no-optional
 
 #######
 # app #
-FROM node:16-alpine
+FROM node:14-alpine
 
 RUN apk add --no-cache graphicsmagick
 
