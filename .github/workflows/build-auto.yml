@@ -2,7 +2,7 @@ name: 'Auto Builds'
 
 on:
   schedule:
-    - cron: '27 1 * * 1'
+    - cron: '37 3 * * 1'
 
 jobs:
   build-and-push-image:
