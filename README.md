@@ -14,6 +14,6 @@
     ports:
       - "10407:10407"
     volumes:
-      ./bibliogram/config.js:/app/config.js:ro
-      ./bibliogram/db:/app/db
+      - ./bibliogram/config.js:/app/config.js:ro
+      - ./bibliogram/db:/app/db
 ```
