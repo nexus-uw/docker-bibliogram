@@ -13,7 +13,7 @@ RUN npm install --no-optional
 # app #
 FROM ghcr.io/linuxserver/baseimage-alpine:3.14
 
-RUN apk add --no-cache graphicsmagick nodejs-current
+RUN apk add --no-cache graphicsmagick nodejs npm
 
 WORKDIR /app
 
