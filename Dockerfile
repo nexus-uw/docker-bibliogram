@@ -15,10 +15,11 @@ FROM ghcr.io/linuxserver/baseimage-alpine:3.15
 
 RUN apk add --no-cache graphicsmagick nodejs npm
 
+COPY --from=builder /app/ /app/
 WORKDIR /app
 
-COPY --from=builder /app/ /app/
+RUN chown -R abc:abc /app
 
 EXPOSE 10407
 
-CMD ["npm", "start"]
+CMD ["s6-setuidgid", "abc", "npm", "start"]
