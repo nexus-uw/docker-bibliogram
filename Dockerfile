@@ -11,7 +11,7 @@ RUN npm install --no-optional
 
 #######
 # app #
-FROM node:16-alpine
+FROM ghcr.io/linuxserver/baseimage-alpine:3.15
 
 RUN apk add --no-cache graphicsmagick
 
